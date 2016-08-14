@@ -1,38 +1,22 @@
 #Shellsploit 
+
+[![Join the chat at https://gitter.im/b3mb4m/shellsploit-framework](https://badges.gitter.im/b3mb4m/shellsploit-framework.svg)](https://gitter.im/b3mb4m/shellsploit-framework?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+![MIT Licence](https://img.shields.io/badge/Licence-MIT_Licence-red.svg?style=plastic)
+[![Python 3.4](https://img.shields.io/badge/Python-3.4-yellow.svg?style=plastic)](https://www.python.org/)
+[![Python 2.7](https://img.shields.io/badge/Python-2.7-yellow.svg?style=plastic)](https://www.python.org/)
+![v0.3](https://img.shields.io/badge/Release-v0.3-orange.svg?style=plastic)
+
 -------------
 
 Shellsploit let's you generate customized shellcodes, backdoors, injectors for various operating system.
 And let's you obfuscation every byte via encoders.
 
 
-"Please do not forget before use shellsploit is still BETA.And its not only about "shellcodes"."
-
-
-
-#Install/Uninstall	
+#Shellsploit Wiki 
 -------------------
+* [Installation Guide](https://github.com/b3mb4m/shellsploit-framework/wiki/Installation-Guide)
+* [Compatible Operation Systems](https://github.com/b3mb4m/shellsploit-framework/wiki/Compatible-Operation-Systems)
 
-If you want to use Shellsploit, you have to install [Capstone](http://www.capstone-engine.org/) first.
-
-For the Capstone's installation:
-    	
-    root$ sudo pip install capstone
-
-Also pyreadline for tab completion:
-   	
-   	root$ sudo pip install readline
-    
-
-Pip works on both windows/nix machines without problem. Now you are ready to install:
-
-    root$ python setup.py --s/ --setup install 
-    root$ chmod +x shellsploit (if you are using windows just pass this step)
-    root$ ./shellsploit
-
-Don't want it anymore? Uninstall it:
-
-    root$ python setup.py --s/--setup uninstall 
- 
 
 #Usage
 -----
@@ -42,7 +26,7 @@ Don't want it anymore? Uninstall it:
 
 
     optional arguments:
-	  	   -l, --list 			Show  list of backdoors,shellcodes,injectors
+	  	   -l, --list 			Show  list of backdoors,shellcodes,encoders,injectors
 	  	   -p, --payload 		Set payload for usage
 	  	   -n, -nc 				Declare netcat for usage
 	  	   --host				The connect/listen address
@@ -85,14 +69,19 @@ Don't want it anymore? Uninstall it:
 #Bugs
 ------
 
-Please do not forget to report bugs! You can submit an issue, pull request, or even directly PM me through my email address.
+Please do not forget to report bugs! You can submit an issue, pull request, or you can pm via email or xmpp and newly gitter,
 
 
-#Screenshots
--------------
+######https://gitter.im/b3mb4m/shellsploit-framework
+######shellsploit-framework@exploit.im     - Instant chat
+######shellsploit-framework@protonmail.com 
 
-![alt tag](http://i.hizliresim.com/28XmmN.png)
-![alt tag](http://i.hizliresim.com/7MrYVv.png)
-![alt tag](http://i.hizliresim.com/W18pL2.png)
-![alt tag](http://i.hizliresim.com/pBMNO0.png)
-![alt tag](http://i.hizliresim.com/rZP6vV.png)
+
+
+
+#Donations
+-----------
+
+Shellsploit project is completely funded  through donations(no sponsors etc.).This project consume a lot of time so if you consider worth it, please consider donation.Thank you.
+
+BTC :  1DGrZ5BuzMAHa4dtScsSQNRXnLafnYeqqD

@@ -5,9 +5,10 @@
 #LICENSE : https://github.com/b3mb4m/Shellsploit/blob/master/LICENSE
 #------------------------------------------------------------------#
 
+from header import *
+
 def CFile( shellcode):
-	import time
-	db = """//Project : https://github.com/b3mb4m/Shellsploit
+    db = """//Project : https://github.com/b3mb4m/Shellsploit
 //This file created with shellsploit ..
 //%s - %s
 //Compile : gcc -fno-stack-protector -z execstack shell.c -o shell
@@ -19,7 +20,6 @@ int main(void){
 }
 
   
-""" % (time.strftime("%d/%m/%Y"), time.strftime("%H:%M:%S"), shellcode)
+""" % (strftime("%d/%m/%Y"), strftime("%H:%M:%S"), shellcode)
 
-	from .logger import logs
-	logs( db, "c")
+    logs( db, "c")

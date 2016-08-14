@@ -5,10 +5,11 @@
 #LICENSE : https://github.com/b3mb4m/Shellsploit/blob/master/LICENSE
 #------------------------------------------------------------------#
 
+from header import *
+
 def CplusplusFile( shellcode, win=False):
-	import time
-	if win == True:
-		db = """//Project : https://github.com/b3mb4m/Shellsploit
+    if win == True:
+        db = """//Project : https://github.com/b3mb4m/Shellsploit
 //This file created with shellsploit ..
 //%s - %s
 //Compile : gcc shell.c -o shell.exe
@@ -37,10 +38,10 @@ int main(void)
 	return EXIT_SUCCESS;
 }	
 
-		""" % ( time.strftime("%d/%m/%Y"), time.strftime("%H:%M:%S"), shellcode)
+		""" % ( strftime("%d/%m/%Y"), strftime("%H:%M:%S"), shellcode)
 
-	else:
-		db = """//Project : https://github.com/b3mb4m/Shellsploit
+    else:
+        db = """//Project : https://github.com/b3mb4m/Shellsploit
 //This file created with shellsploit ..
 //%s - %s
 //Compile : g++ -fno-stack-protector -z execstack shell.cpp -o shell
@@ -52,11 +53,10 @@ int main(){
 	func();
 }
 		  
-		""" % (time.strftime("%d/%m/%Y"), time.strftime("%H:%M:%S"), shellcode)
+		""" % (strftime("%d/%m/%Y"), strftime("%H:%M:%S"), shellcode)
 
 
-	from .logger import logs
-	logs( db, "cpp")
+    logs( db, "cpp")
 
 
 

@@ -5,17 +5,16 @@
 #LICENSE : https://github.com/b3mb4m/Shellsploit/blob/master/LICENSE
 #------------------------------------------------------------------#
 
+from header import *
 
 def TxtFile( shellcode):
-	import time
-	db = '''#Project : https://github.com/b3mb4m/Shellsploit
+    db = '''#Project : https://github.com/b3mb4m/Shellsploit
 #This file created with shellsploit ..
 #{0} - {1}
 
 
 {2}
  
-'''.format(time.strftime("%d/%m/%Y"), time.strftime("%H:%M:%S"), shellcode)
+'''.format(strftime("%d/%m/%Y"), strftime("%H:%M:%S"), shellcode)
 
-	from .logger import logs
-	logs( db, "txt")
+    logs( db, "txt")

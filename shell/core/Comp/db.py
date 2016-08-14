@@ -1,72 +1,83 @@
 #------------------Bombermans Team---------------------------------# 
-#Author  : B3mB4m
-#Concat  : b3mb4m@protonmail.com
-#Project : https://github.com/b3mb4m/Shellsploit
-#LICENSE : https://github.com/b3mb4m/Shellsploit/blob/master/LICENSE
+# Author  : B3mB4m
+# Concat  : b3mb4m@protonmail.com
+# Project : https://github.com/b3mb4m/Shellsploit
+# LICENSE : https://github.com/b3mb4m/Shellsploit/blob/master/LICENSE
 #------------------------------------------------------------------#
 
-def ret():
-	list = [
-		"back",			
-		"set",		
-		"ip",			
-		"clear",		
-		"disas",		
-		"whatisthis",     
-		"iteration",		
-		"generate", 	
-		"output",			
-		"show",		
-		"encoders",
-		"options",	
-	]
-	return list
+
+#from shell.payloads import *
+from lib.utils.modules import modulelist 
 
 
-def ret2():
-	list = [
-		"linux",	 
-		"linux_arm",
-		"linux_mips",
-		"solarisx86",
-		"osx",
-		"FreeBSDx",
-		"windows",
+def shellsploitlist():
+    list = [
+        "help",		
+        "os",
+        "use",
+        "clear",
+        "show",
+        "shellcodes",
+        "backdoors",
+        "injectors",	
+        "encoders",
+
+    ]
+    all_sc_modules = []
+    for platforms in modulelist().AllModules().keys():
+        for shellcodeType in modulelist().AllModules()[platforms]:
+            all_sc_modules.append("{}/{}".format(platforms, shellcodeType))
+            for shellcode in all_sc_modules:
+                list.append(shellcode)
+    return list
 
 
-		"encoders",
-		"options",	
+def shellcodelist():
+    return [
+        "back",	
+        "set",			
+        "unset",			
+        "ip",		
+        "os",			
+        "clear",		
+        "disas",		
+        "whatisthis",      
+        "iteration",	
+        "generate",	
+        "output", 	
+        "show", 
+        "encoders",	
+        "options",	
+        "help",
+    ]
 
-		"binsh_spawn",
-		"bindash_spawn",
-		"read",
-		"chmod",
-		"reboot",
-		"shutdown",
-		"mkdir",
-		"rmdir",
-		"ipv4forward",
-		"Remoteportforward",
-		"reverse_telnet",
-		"add_user",
-		"DeleteMBR",
-		"tcp_bind",
-		"reverse_tcp",
-		"egghunter",
-		"add_map",
-		"netcatbind",
-		"creat",
-		"messagebox",
-		"download&execute",
-		"killall",
-		"netcatreverse",
 
-		"generate",
-		"help",          
-		"clear",			
-		"use",			
-		"show",
-		"modules",  	
-		"injectors",
-	]
-	return list
+def injectorlist():
+    return [
+        "set",	
+        "unset",			
+        "help",			
+        "back",		
+        "os",			
+        "getpid",		
+        "clear",		
+        "inject",      
+        "iteration",	
+        "show",	
+        "options", 	
+        "shellcode", 
+    ]
+
+
+def backdoorlist():
+    return [
+        "set",	
+        "unset",			
+        "help",			
+        "back",		
+        "os",			
+        "clear",		
+        "generate",      
+        "show",	
+        "options", 	
+    ]
